@@ -203,7 +203,7 @@ class ReactMidiPlayerDemo extends React.Component {
     const { url } = this.props;
     return (
       <div>
-        ReactMidiPlayerDemo{" "}
+        ReactMidiPlayerDemo Playing url : {url}
         <ReactMidiPlayer
           midiPlayer={this.state.player}
           midiPlayerState={this.state.playerState}
