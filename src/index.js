@@ -167,9 +167,6 @@ class ReactMidiPlayer extends React.Component {
         )}
       </div>
     );
-    // tracks.map((track, i) => (
-    //   <ReactMidiTrack key={i} instrument={instrument} />
-    // ))
   }
 }
 ReactMidiPlayer.defaultProps = {
@@ -177,38 +174,12 @@ ReactMidiPlayer.defaultProps = {
   midiPlayerState: ""
 };
 class ReactMidiPlayerDemo extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      player: null,
-      playerState: "stopped"
-    };
-  }
-  componentDidMount() {
-    // const { url } = this.props;
-    // loadMidi(url).then(midi => {
-    //   const player = new MidiPlayer.Player();
-    //   player.loadArrayBuffer(midi);
-    //   this.setState({ player });
-    // });
-  }
-  componentDidUpdate(prevProps, prevState) {
-    // const { url } = this.props;
-    // const previousURL = prevProps.url;
-    // if (url !== previousURL) {
-    //   loadMidi(url).then(console.log);
-    // }
-  }
   render() {
     const { url } = this.props;
     return (
       <div>
         ReactMidiPlayerDemo Playing url : {url}
-        <ReactMidiPlayer
-          midiPlayer={this.state.player}
-          midiPlayerState={this.state.playerState}
-          url={url}
-        />
+        <ReactMidiPlayer url={url} />
       </div>
     );
   }
